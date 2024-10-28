@@ -15,7 +15,12 @@ This project is a Flask web application that predicts loan eligibility based on 
 - **Backend**: Flask
 - **Machine Learning**: Pre-trained model using `joblib`
 
-## Installation
+## UI
+![WhatsApp Image 2024-10-29 at 01 20 40](https://github.com/user-attachments/assets/3d2e447d-693d-490e-a071-4aa684b5c4e3)
+![WhatsApp Image 2024-10-29 at 01 20 40 (1)](https://github.com/user-attachments/assets/a762120f-545c-40bb-98d7-ca9780258131)
+![WhatsApp Image 2024-10-29 at 01 20 40 (2)](https://github.com/user-attachments/assets/646a7c62-97f4-48c6-ae21-cf9d3da7aaba)
+![WhatsApp Image 2024-10-29 at 01 20 41](https://github.com/user-attachments/assets/6f68abb8-4124-454c-bb60-6412d8790aac)
+
 
 ### Prerequisites
 
