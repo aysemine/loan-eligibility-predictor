@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Eligibility Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .btn-submit {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Check Your Loan Eligibility</h2>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="person_age" class="form-label">Age:</label>
+                <input type="number" class="form-control" name="person_age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="person_income" class="form-label">Income:</label>
+                <input type="number" class="form-control" name="person_income" required>
+            </div>
+
+            <div class="form-group">
+                <label for="personhomeownership" class="form-label">Home Ownership:</label>
+                <select name="personhomeownership" class="form-control">
+                    <option value="RENT">Rent</option>
+                    <option value="OWN">Own</option>
+                    <option value="MORTGAGE">Mortgage</option>
+                    <option value="OTHER">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="personemplength" class="form-label">Employment Length (years):</label>
+                <input type="number" class="form-control" name="personemplength" required>
+            </div>
+
+            <div class="form-group">
+                <label for="loan_intent" class="form-label">Loan Intent:</label>
+                <select name="loan_intent" class="form-control">
+                    <option value="EDUCATION">Education</option>
+                    <option value="MEDICAL">Medical</option>
+                    <option value="VENTURE">Venture</option>
+                    <option value="PERSONAL">Personal</option>
+                    <option value="DEBTCONSOLIDATION">Debt Consolidation</option>
+                    <option value="HOMEIMPROVEMENT">Home Improvement</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="loan_grade" class="form-label">Loan Grade:</label>
+                <select name="loan_grade" class="form-control">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="loan_amnt" class="form-label">Loan Amount:</label>
+                <input type="number" class="form-control" name="loan_amnt" required>
+            </div>
+
+            <div class="form-group">
+                <label for="loanpercentincome" class="form-label">Loan Percent of Income:</label>
+                <input type="number" step="0.01" class="form-control" name="loanpercentincome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cbpersondefaultonfile" class="form-label">Default on File:</label>
+                <select name="cbpersondefaultonfile" class="form-control">
+                    <option value="Y">Yes</option>
+                    <option value="N">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="cbpresoncredhistlength" class="form-label">Credit History Length:</label>
+                <input type="number" class="form-control" name="cbpresoncredhistlength" required>
+            </div>
+
+            <button type="submit" class="btn btn-submit btn-block">Check Eligibility</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
